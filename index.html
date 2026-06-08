@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Best Friend Day, Frosty!</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            overflow: hidden;
+        }
+
+        h1 {
+            color: white;
+            font-size: 50px;
+            margin-top: 100px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            color: white;
+            font-size: 25px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px white; }
+            to { text-shadow: 0 0 30px yellow; }
+        }
+
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 30px;
+            animation: float 5s linear infinite;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(100vh);
+            }
+            to {
+                transform: translateY(-100px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🎉 Happy Best Friend Day, Frosty! 🎉</h1>
+
+<p>
+You are an amazing friend! 😎❤️<br>
+Thanks for all the fun memories and laughs!
+</p>
+
+<button onclick="message()">
+    Click Me!
+</button>
+
+<script>
+function message() {
+    alert("Frosty, you're the BEST friend ever! ❤️");
+}
+
+for(let i = 0; i < 20; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
